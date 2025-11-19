@@ -1,0 +1,197 @@
+import React, { useEffect } from 'react';
+import Hero from '../components/Hero';
+import Card from '../components/Card';
+import Carousel from '../components/Carousel';
+import Testimonial from '../components/Testimonial';
+import CTA from '../components/CTA';
+import Gallery from '../components/Gallery';
+import Form from '../components/Form';
+
+export default function Home() {
+  useEffect(() => {
+    document.title = 'Vedic Hindi School - Learn Language, Practice Culture';
+  }, []);
+
+  const testimonialsData = [
+    {
+      content: (
+        <Testimonial
+          quote="The programs here transformed my understanding of Hindi and Indian culture. Highly recommend!"
+          author="Priya Sharma"
+          role="Student"
+          rating={5}
+        />
+      ),
+    },
+    {
+      content: (
+        <Testimonial
+          quote="Excellent teaching methods and very supportive community. My children love attending classes."
+          author="Rajesh Kumar"
+          role="Parent"
+          rating={5}
+        />
+      ),
+    },
+    {
+      content: (
+        <Testimonial
+          quote="VHS helped me reconnect with my heritage. Worth every minute!"
+          author="Ananya Patel"
+          role="Student"
+          rating={5}
+        />
+      ),
+    },
+  ];
+
+  return (
+    <>
+      {/* Hero Section */}
+      <Hero
+        title="Learn Language to Practise Culture and to Know Your Heritage"
+        subtitle="Master Hindi through immersive learning and cultural exploration"
+        ctas={[
+          { label: 'Join a Class', href: '#programs', variant: 'btn-primary' },
+          {
+            label: 'Partner With Us',
+            href: '/partnerships',
+            variant: 'btn-outline',
+          },
+          {
+            label: 'Volunteer',
+            href: '#contact',
+            variant: 'btn-outline',
+          },
+        ]}
+      />
+
+      {/* About Our Mission */}
+      <section className="section">
+        <div className="container">
+          <div className="grid grid-2">
+            <div>
+              <h2>About Our Mission</h2>
+              <p>
+                At Vedic Hindi School, we believe language is the gateway to
+                culture. Our mission is to make Hindi learning accessible,
+                engaging, and deeply rooted in Indian heritage.
+              </p>
+              <p>
+                Through innovative teaching methods and community-driven
+                initiatives, we empower students worldwide to connect with their
+                roots and appreciate the rich cultural traditions of India.
+              </p>
+            </div>
+            <div>
+              <img
+                src="https://via.placeholder.com/400x300?text=About+Mission"
+                alt="About Our Mission"
+                style={{
+                  borderRadius: 'var(--radius-lg)',
+                  width: '100%',
+                  height: 'auto',
+                }}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Programs and Services */}
+      <section className="section bg-light">
+        <div className="container">
+          <h2 style={{ textAlign: 'center', marginBottom: 'var(--spacing-2xl)' }}>
+            Our Programs & Services
+          </h2>
+          <div className="grid grid-3">
+            <Card
+              icon="📚"
+              title="Language Courses"
+              text="Structured Hindi learning from beginner to advanced levels"
+              href="/programs"
+            />
+            <Card
+              icon="🎭"
+              title="Cultural Events"
+              text="Immersive experiences celebrating Indian festivals and traditions"
+              href="/"
+            />
+            <Card
+              icon="👥"
+              title="Community Learning"
+              text="Interactive study circles and peer-to-peer learning groups"
+              href="/"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* What Our Students Say */}
+      <section className="section">
+        <div className="container">
+          <h2 style={{ textAlign: 'center', marginBottom: 'var(--spacing-2xl)' }}>
+            What Our Students Say
+          </h2>
+          <Carousel items={testimonialsData} autoRotate={true} />
+        </div>
+      </section>
+
+      {/* Join Our Community CTA */}
+      <CTA
+        title="Join Our Community"
+        description="Be part of a vibrant network of Hindi learners and culture enthusiasts"
+        buttonText="Get Started Today"
+        href="/contact"
+      />
+
+      {/* Cultural Events Gallery */}
+      <section className="section">
+        <div className="container">
+          <h2 style={{ textAlign: 'center', marginBottom: 'var(--spacing-2xl)' }}>
+            Cultural Events Gallery
+          </h2>
+          <Gallery />
+        </div>
+      </section>
+
+      {/* Get in Touch */}
+      <section className="section bg-light">
+        <div className="container">
+          <h2 style={{ textAlign: 'center', marginBottom: 'var(--spacing-2xl)' }}>
+            Get in Touch
+          </h2>
+          <div className="grid grid-2">
+            <div>
+              <h3>Contact Information</h3>
+              <div style={{ marginBottom: 'var(--spacing-lg)' }}>
+                <p style={{ fontWeight: '600', marginBottom: 'var(--spacing-xs)' }}>
+                  📍 Address
+                </p>
+                <p>123 Cultural Center, Heritage City, India 100001</p>
+              </div>
+              <div style={{ marginBottom: 'var(--spacing-lg)' }}>
+                <p style={{ fontWeight: '600', marginBottom: 'var(--spacing-xs)' }}>
+                  ✉️ Email
+                </p>
+                <a href="mailto:info@vedichiindischool.org">
+                  info@vedichiindischool.org
+                </a>
+              </div>
+              <div style={{ marginBottom: 'var(--spacing-lg)' }}>
+                <p style={{ fontWeight: '600', marginBottom: 'var(--spacing-xs)' }}>
+                  📱 Phone
+                </p>
+                <a href="tel:+1234567890">+1 (234) 567-8900</a>
+              </div>
+            </div>
+            <div>
+              <h3>Send us a Message</h3>
+              <Form />
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}

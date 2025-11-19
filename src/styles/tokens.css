@@ -1,0 +1,94 @@
+/* ============================================
+   TOKENS.CSS - Design System & CSS Variables
+   ============================================ */
+
+:root {
+  /* Colors */
+  --color-primary: #FF9933;
+  --color-secondary: #138808;
+  --color-accent: #000080;
+  --color-background: #FFFFFF;
+  --color-text: #333333;
+  --color-background-accent: #F5F5F5;
+  --color-transparent: #00000000;
+  --color-text-light: #666666;
+  --color-border: #E0E0E0;
+  --color-error: #D32F2F;
+  --color-success: #388E3C;
+
+  /* Font Families */
+  --font-headings: 'Poppins', sans-serif;
+  --font-body: 'Figtree', sans-serif;
+
+  /* Heading Type Scale - Poppins (font-weight: 600) */
+  --heading-xl-size: clamp(2.25rem, 5vw, 3.5rem);
+  --heading-xl-line: 1.2;
+  --heading-l-size: clamp(1.875rem, 4vw, 2.75rem);
+  --heading-l-line: 1.2;
+  --heading-m-size: clamp(1.5rem, 3vw, 2.25rem);
+  --heading-m-line: 1.3;
+  --heading-s-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  --heading-s-line: 1.3;
+  --heading-xs-size: 1.125rem;
+  --heading-xs-line: 1.4;
+  --heading-xxs-size: 0.875rem;
+  --heading-xxs-line: 1.4;
+
+  /* Body Type Scale - Figtree (font-weight: 400/500) */
+  --body-large-size: 1.125rem;
+  --body-large-line: 1.6;
+  --body-medium-size: 1rem;
+  --body-medium-line: 1.6;
+  --body-small-size: 0.875rem;
+  --body-small-line: 1.5;
+
+  /* Spacing Scale */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  --spacing-3xl: 4rem;
+  --spacing-4xl: 5rem;
+
+  /* Breakpoints */
+  --bp-mobile: 480px;
+  --bp-tablet: 768px;
+  --bp-desktop: 1024px;
+  --bp-wide: 1440px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.15);
+
+  /* Border Radius */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: 150ms ease-out;
+  --transition-base: 250ms ease-out;
+  --transition-slow: 350ms ease-out;
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --transition-fast: 0ms;
+    --transition-base: 0ms;
+    --transition-slow: 0ms;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
