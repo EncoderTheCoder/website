@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState } from 'react';
 
 export default function Accordion({ items = [] }) {
   const [activeIndex, setActiveIndex] = useState(null);

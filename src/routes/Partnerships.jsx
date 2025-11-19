@@ -11,24 +11,6 @@ export default function Partnerships() {
     document.title = 'Partnerships - Vedic Hindi School';
   }, []);
 
-  const benefits = [
-    {
-      icon: '📚',
-      title: 'Curriculum Support',
-      text: 'Access our comprehensive Hindi curriculum and teaching materials',
-    },
-    {
-      icon: '👨‍🏫',
-      title: 'Training & Development',
-      text: 'Ongoing professional development for your teaching staff',
-    },
-    {
-      icon: '🎓',
-      title: 'Certification Programs',
-      text: 'Offer recognized VHS certifications to your students',
-    },
-  ];
-
   const processSteps = [
     {
       icon: '1️⃣',
