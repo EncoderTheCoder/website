@@ -67,31 +67,42 @@ export default function Home() {
       />
 
       {/* About Our Mission */}
-      <section className="section">
+      <section className="section about-mission-section">
         <div className="container">
-          <div className="grid grid-2">
-            <div>
-              <h2>About Our Mission</h2>
-              <p>
+          <div className="grid grid-2 about-grid">
+            <div className="about-content">
+              <span className="section-label">Our Mission</span>
+              <h2 className="section-title">Learn, Connect, Celebrate Heritage</h2>
+              <p className="about-text">
                 At Vedic Hindi School, we believe language is the gateway to
                 culture. Our mission is to make Hindi learning accessible,
                 engaging, and deeply rooted in Indian heritage.
               </p>
-              <p>
+              <p className="about-text">
                 Through innovative teaching methods and community-driven
                 initiatives, we empower students worldwide to connect with their
                 roots and appreciate the rich cultural traditions of India.
               </p>
+              <div className="about-stats">
+                <div className="stat">
+                  <h3 className="stat-number">500+</h3>
+                  <p className="stat-label">Active Students</p>
+                </div>
+                <div className="stat">
+                  <h3 className="stat-number">15+</h3>
+                  <p className="stat-label">Expert Teachers</p>
+                </div>
+                <div className="stat">
+                  <h3 className="stat-number">10+</h3>
+                  <p className="stat-label">Years Experience</p>
+                </div>
+              </div>
             </div>
-            <div>
+            <div className="about-image-wrapper">
               <img
-                src="https://via.placeholder.com/400x300?text=About+Mission"
+                src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=600&fit=crop"
                 alt="About Our Mission"
-                style={{
-                  borderRadius: 'var(--radius-lg)',
-                  width: '100%',
-                  height: 'auto',
-                }}
+                className="about-image"
               />
             </div>
           </div>
