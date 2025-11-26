@@ -1,0 +1,48 @@
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* Move by the width of one set of images */
+  }
+}
+
+.gallery-carousel-container {
+  overflow: hidden;
+  padding: var(--spacing-lg) 0;
+  width: 100%;
+  position: relative;
+}
+
+.gallery-carousel-track {
+  display: flex;
+  gap: var(--spacing-lg);
+  /* Adjust animation duration based on the number of images */
+  animation: scroll 60s linear infinite;
+  width: fit-content; /* Let the track be as wide as its content */
+}
+
+.gallery-carousel-container:hover .gallery-carousel-track {
+  animation-play-state: paused; /* Pause animation on hover */
+}
+
+.gallery-figure {
+  margin: 0;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  transition: transform var(--transition-base);
+  cursor: pointer;
+  flex-shrink: 0; /* Prevent images from shrinking */
+  width: 300px; /* Give images a fixed width */
+}
+
+.gallery-figure:hover {
+  transform: scale(1.05);
+}
+
+.gallery-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}

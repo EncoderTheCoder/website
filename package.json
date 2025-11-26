@@ -2,6 +2,7 @@
   "name": "vhs-site",
   "private": true,
   "version": "0.0.1",
+  "homepage": ".",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
