@@ -2,30 +2,21 @@ import React from 'react';
 
 export default function CTA({ title, description, buttonText, href = '#' }) {
   return (
-    <section
-      className="section bg-primary"
-      style={{
-        background: 'linear-gradient(135deg, var(--color-primary), var(--color-secondary))',
-        color: 'var(--color-background)',
-        textAlign: 'center',
-      }}
-    >
+    <section className="cta-section">
+      <div className="cta-background"></div>
+      <div className="cta-overlay"></div>
       <div className="container">
-        <h2 style={{ color: 'var(--color-background)' }}>{title}</h2>
-        {description && (
-          <p
-            style={{
-              fontSize: 'var(--body-large-size)',
-              marginBottom: 'var(--spacing-xl)',
-              color: 'rgba(255, 255, 255, 0.95)',
-            }}
-          >
-            {description}
-          </p>
-        )}
-        <a href={href} className="btn btn-outline">
-          {buttonText}
-        </a>
+        <div className="cta-content">
+          <h2 className="cta-title">{title}</h2>
+          {description && (
+            <p className="cta-description">
+              {description}
+            </p>
+          )}
+          <a href={href} className="cta-button">
+            {buttonText}
+          </a>
+        </div>
       </div>
     </section>
   );
