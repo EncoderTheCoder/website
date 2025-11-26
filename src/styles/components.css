@@ -312,10 +312,16 @@
   margin-bottom: var(--spacing-sm);
   color: var(--color-text);
   transition: color var(--transition-base);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .card:hover .card-title {
-  color: var(--color-primary);
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .card-text {
