@@ -44,7 +44,11 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(255, 153, 51, 0.2), rgba(19, 136, 8, 0.2));
+  background: linear-gradient(
+    135deg,
+    rgba(255, 153, 51, 0.2),
+    rgba(19, 136, 8, 0.2)
+  );
   opacity: 0;
   transition: opacity var(--transition-base);
   z-index: 2;

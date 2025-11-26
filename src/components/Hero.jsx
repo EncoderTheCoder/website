@@ -6,12 +6,16 @@ export default function Hero({
   bgImage = null,
   ctas = [],
 }) {
-  const defaultBgImage = 'https://images.unsplash.com/photo-1531482615713-2afd69097998?w=1200&h=600&fit=crop';
+  const defaultBgImage =
+    'https://images.unsplash.com/photo-1531482615713-2afd69097998?w=1200&h=600&fit=crop';
   const imageSrc = bgImage || defaultBgImage;
 
   return (
     <section className="hero">
-      <div className="hero-background" style={{ backgroundImage: `url(${imageSrc})` }}></div>
+      <div
+        className="hero-background"
+        style={{ backgroundImage: `url(${imageSrc})` }}
+      ></div>
       <div className="hero-overlay"></div>
       <div className="hero-content">
         <div className="hero-text-wrapper">
@@ -20,11 +24,7 @@ export default function Hero({
           {ctas.length > 0 && (
             <div className="hero-ctas">
               {ctas.map((cta, idx) => (
-                <a
-                  key={idx}
-                  href={cta.href || '#'}
-                  className="hero-cta-btn"
-                >
+                <a key={idx} href={cta.href || '#'} className="hero-cta-btn">
                   {cta.label}
                 </a>
               ))}

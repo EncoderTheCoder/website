@@ -72,7 +72,9 @@ export default function Home() {
           <div className="grid grid-2 about-grid">
             <div className="about-content">
               <span className="section-label">Our Mission</span>
-              <h2 className="section-title">Learn, Connect, Celebrate Heritage</h2>
+              <h2 className="section-title">
+                Learn, Connect, Celebrate Heritage
+              </h2>
               <p className="about-text">
                 At Vedic Hindi School, we believe language is the gateway to
                 culture. Our mission is to make Hindi learning accessible,
@@ -115,7 +117,9 @@ export default function Home() {
           <div className="section-header">
             <span className="section-label">What We Offer</span>
             <h2 className="section-title">Our Programs & Services</h2>
-            <p className="section-description">Comprehensive learning experiences designed for all levels</p>
+            <p className="section-description">
+              Comprehensive learning experiences designed for all levels
+            </p>
           </div>
           <div className="grid grid-3 programs-grid">
             <Card
@@ -149,7 +153,9 @@ export default function Home() {
           <div className="section-header">
             <span className="section-label">Success Stories</span>
             <h2 className="section-title">What Our Students Say</h2>
-            <p className="section-description">Hear from our thriving community of learners</p>
+            <p className="section-description">
+              Hear from our thriving community of learners
+            </p>
           </div>
           <Carousel items={testimonialsData} autoRotate={true} />
         </div>
@@ -169,7 +175,9 @@ export default function Home() {
           <div className="section-header">
             <span className="section-label">Our Community</span>
             <h2 className="section-title">Cultural Events Gallery</h2>
-            <p className="section-description">Explore the vibrant moments from our events and celebrations</p>
+            <p className="section-description">
+              Explore the vibrant moments from our events and celebrations
+            </p>
           </div>
           <Gallery />
         </div>
@@ -180,18 +188,25 @@ export default function Home() {
         <div className="container">
           <div className="section-header">
             <h2 className="section-title">Get in Touch</h2>
-            <p className="section-description">We'd love to hear from you. Reach out with any questions!</p>
+            <p className="section-description">
+              We'd love to hear from you. Reach out with any questions!
+            </p>
           </div>
           <div className="grid grid-2 contact-grid">
             <div className="contact-info">
               <h3 className="contact-title">Contact Information</h3>
               <div className="contact-item">
                 <p className="contact-label">📍 Address</p>
-                <p className="contact-value">123 Cultural Center, Heritage City, India 100001</p>
+                <p className="contact-value">
+                  123 Cultural Center, Heritage City, India 100001
+                </p>
               </div>
               <div className="contact-item">
                 <p className="contact-label">✉️ Email</p>
-                <a href="mailto:info@vedichiindischool.org" className="contact-link">
+                <a
+                  href="mailto:info@vedichiindischool.org"
+                  className="contact-link"
+                >
                   info@vedichiindischool.org
                 </a>
               </div>

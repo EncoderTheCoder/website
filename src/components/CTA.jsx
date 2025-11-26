@@ -8,11 +8,7 @@ export default function CTA({ title, description, buttonText, href = '#' }) {
       <div className="container">
         <div className="cta-content">
           <h2 className="cta-title">{title}</h2>
-          {description && (
-            <p className="cta-description">
-              {description}
-            </p>
-          )}
+          {description && <p className="cta-description">{description}</p>}
           <a href={href} className="cta-button">
             {buttonText}
           </a>
