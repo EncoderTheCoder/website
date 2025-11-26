@@ -705,27 +705,33 @@
 
 .section-label {
   display: inline-block;
+  background: linear-gradient(135deg, var(--color-pink), var(--color-teal));
+  color: var(--color-background);
+  padding: var(--spacing-xs) var(--spacing-md);
+  border-radius: var(--radius-full);
+  font-size: var(--body-small-size);
+  font-weight: 700;
+  margin-bottom: var(--spacing-md);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 15px rgba(255, 0, 212, 0.2);
+}
+
+.section-title {
+  font-size: clamp(2rem, 6vw, 3rem);
+  color: var(--color-text);
+  margin-bottom: var(--spacing-md);
+  font-weight: 900;
+  letter-spacing: -1px;
+  text-transform: uppercase;
   background: linear-gradient(
     135deg,
     var(--color-primary),
     var(--color-secondary)
   );
-  color: var(--color-background);
-  padding: var(--spacing-xs) var(--spacing-md);
-  border-radius: var(--radius-full);
-  font-size: var(--body-small-size);
-  font-weight: 600;
-  margin-bottom: var(--spacing-md);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.section-title {
-  font-size: 2.5rem;
-  color: var(--color-text);
-  margin-bottom: var(--spacing-md);
-  font-weight: 700;
-  letter-spacing: -0.5px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .section-description {
@@ -733,6 +739,7 @@
   color: var(--color-text-light);
   max-width: 600px;
   margin: 0 auto;
+  font-weight: 500;
 }
 
 /* About Mission Section */
