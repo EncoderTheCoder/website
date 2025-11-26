@@ -176,37 +176,34 @@ export default function Home() {
       </section>
 
       {/* Get in Touch */}
-      <section className="section bg-light">
+      <section className="section contact-section">
         <div className="container">
-          <h2 style={{ textAlign: 'center', marginBottom: 'var(--spacing-2xl)' }}>
-            Get in Touch
-          </h2>
-          <div className="grid grid-2">
-            <div>
-              <h3>Contact Information</h3>
-              <div style={{ marginBottom: 'var(--spacing-lg)' }}>
-                <p style={{ fontWeight: '600', marginBottom: 'var(--spacing-xs)' }}>
-                  📍 Address
-                </p>
-                <p>123 Cultural Center, Heritage City, India 100001</p>
+          <div className="section-header">
+            <h2 className="section-title">Get in Touch</h2>
+            <p className="section-description">We'd love to hear from you. Reach out with any questions!</p>
+          </div>
+          <div className="grid grid-2 contact-grid">
+            <div className="contact-info">
+              <h3 className="contact-title">Contact Information</h3>
+              <div className="contact-item">
+                <p className="contact-label">📍 Address</p>
+                <p className="contact-value">123 Cultural Center, Heritage City, India 100001</p>
               </div>
-              <div style={{ marginBottom: 'var(--spacing-lg)' }}>
-                <p style={{ fontWeight: '600', marginBottom: 'var(--spacing-xs)' }}>
-                  ✉️ Email
-                </p>
-                <a href="mailto:info@vedichiindischool.org">
+              <div className="contact-item">
+                <p className="contact-label">✉️ Email</p>
+                <a href="mailto:info@vedichiindischool.org" className="contact-link">
                   info@vedichiindischool.org
                 </a>
               </div>
-              <div style={{ marginBottom: 'var(--spacing-lg)' }}>
-                <p style={{ fontWeight: '600', marginBottom: 'var(--spacing-xs)' }}>
-                  📱 Phone
-                </p>
-                <a href="tel:+1234567890">+1 (234) 567-8900</a>
+              <div className="contact-item">
+                <p className="contact-label">📱 Phone</p>
+                <a href="tel:+1234567890" className="contact-link">
+                  +1 (234) 567-8900
+                </a>
               </div>
             </div>
-            <div>
-              <h3>Send us a Message</h3>
+            <div className="contact-form">
+              <h3 className="contact-title">Send us a Message</h3>
               <Form />
             </div>
           </div>
