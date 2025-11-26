@@ -110,29 +110,34 @@ export default function Home() {
       </section>
 
       {/* Our Programs and Services */}
-      <section className="section bg-light">
+      <section className="section programs-section">
         <div className="container">
-          <h2 style={{ textAlign: 'center', marginBottom: 'var(--spacing-2xl)' }}>
-            Our Programs & Services
-          </h2>
-          <div className="grid grid-3">
+          <div className="section-header">
+            <span className="section-label">What We Offer</span>
+            <h2 className="section-title">Our Programs & Services</h2>
+            <p className="section-description">Comprehensive learning experiences designed for all levels</p>
+          </div>
+          <div className="grid grid-3 programs-grid">
             <Card
               icon="📚"
               title="Language Courses"
               text="Structured Hindi learning from beginner to advanced levels"
               href="/programs"
+              variant="language"
             />
             <Card
               icon="🎭"
               title="Cultural Events"
               text="Immersive experiences celebrating Indian festivals and traditions"
               href="/"
+              variant="cultural"
             />
             <Card
               icon="👥"
               title="Community Learning"
               text="Interactive study circles and peer-to-peer learning groups"
               href="/"
+              variant="community"
             />
           </div>
         </div>
