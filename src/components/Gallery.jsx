@@ -1,51 +1,79 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import './Gallery.css';
+import Modal from './Modal';
 
-export default function Gallery({ images = [] }) {
-  const imageArray = images.length > 0 ? images : [
-    { id: 1, src: 'https://via.placeholder.com/300x200?text=Image+1', alt: 'Gallery item 1' },
-    { id: 2, src: 'https://via.placeholder.com/300x200?text=Image+2', alt: 'Gallery item 2' },
-    { id: 3, src: 'https://via.placeholder.com/300x200?text=Image+3', alt: 'Gallery item 3' },
-    { id: 4, src: 'https://via.placeholder.com/300x200?text=Image+4', alt: 'Gallery item 4' },
-    { id: 5, src: 'https://via.placeholder.com/300x200?text=Image+5', alt: 'Gallery item 5' },
-    { id: 6, src: 'https://via.placeholder.com/300x200?text=Image+6', alt: 'Gallery item 6' },
-  ];
+// This function uses Webpack's `require.context` to dynamically import all images
+// from the specified directory.
+function importAll(r) {
+  return r.keys().map((fileName) => ({
+    id: fileName,
+    src: r(fileName),
+    alt: `Vedic Hindi School event image: ${fileName.replace('./', '')}`,
+  }));
+}
+
+// The arguments to require.context are: directory, useSubdirectories, and a matching regex.
+const imagesContext = require.context('../assets/events', false, /\.(png|jpe?g|svg|gif|webp|avif|bmp|ico|tiff)$/i);
+
+export default function Gallery() {
+  const [images, setImages] = useState([]);
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  useEffect(() => {
+    const loadedImages = importAll(imagesContext);
+    setImages(loadedImages);
+  }, []);
+
+  const openModal = (image) => {
+    setSelectedImage(image);
+  };
+
+  const closeModal = () => {
+    setSelectedImage(null);
+  };
+
+  const showNextImage = () => {
+    if (!selectedImage) return;
+    const currentIndex = images.findIndex(img => img.id === selectedImage.id);
+    const nextIndex = (currentIndex + 1) % images.length;
+    setSelectedImage(images[nextIndex]);
+  };
+
+  const showPreviousImage = () => {
+    if (!selectedImage) return;
+    const currentIndex = images.findIndex(img => img.id === selectedImage.id);
+    const prevIndex = (currentIndex - 1 + images.length) % images.length;
+    setSelectedImage(images[prevIndex]);
+  };
 
   return (
-    <div
-      className="gallery"
-      style={{
-        display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-        gap: 'var(--spacing-lg)',
-      }}
-    >
-      {imageArray.map((image) => (
-        <figure
-          key={image.id}
-          style={{
-            margin: 0,
-            overflow: 'hidden',
-            borderRadius: 'var(--radius-lg)',
-            boxShadow: 'var(--shadow-md)',
-            transition: 'transform var(--transition-base)',
-            cursor: 'pointer',
-          }}
-          onMouseEnter={(e) => (e.currentTarget.style.transform = 'scale(1.05)')}
-          onMouseLeave={(e) => (e.currentTarget.style.transform = 'scale(1)')}
-        >
-          <img
-            src={image.src}
-            alt={image.alt}
-            style={{
-              width: '100%',
-              height: '200px',
-              objectFit: 'cover',
-              display: 'block',
-            }}
-            loading="lazy"
-          />
-        </figure>
-      ))}
-    </div>
+    <>
+      <div className="gallery-carousel-container">
+        <div className="gallery-carousel-track">
+          {/* Render the images twice for a seamless loop */}
+          {images.map((image) => (
+            <figure key={image.id} className="gallery-figure" onClick={() => openModal(image)}>
+              <img src={image.src} alt={image.alt} className="gallery-img" loading="lazy" />
+            </figure>
+          ))}
+          {images.map((image) => (
+            <figure key={`${image.id}-duplicate`} className="gallery-figure" onClick={() => openModal(image)}>
+              <img src={image.src} alt={image.alt} className="gallery-img" loading="lazy" />
+            </figure>
+          ))}
+        </div>
+      </div>
+
+      <Modal
+        isOpen={!!selectedImage}
+        onClose={closeModal}
+        onNext={showNextImage}
+        onPrevious={showPreviousImage}
+      >
+        {selectedImage && (
+          <img src={selectedImage.src} alt={selectedImage.alt} />
+        )}
+      </Modal>
+    </>
   );
 }
