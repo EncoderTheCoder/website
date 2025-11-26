@@ -5,33 +5,43 @@ export default function Hero({
   subtitle = '',
   bgImage = null,
   ctas = [],
+  showDecorations = true,
 }) {
-  const defaultBgImage =
-    'https://images.unsplash.com/photo-1531482615713-2afd69097998?w=1200&h=600&fit=crop';
-  const imageSrc = bgImage || defaultBgImage;
-
   return (
-    <section className="hero">
-      <div
-        className="hero-background"
-        style={{ backgroundImage: `url(${imageSrc})` }}
-      ></div>
-      <div className="hero-overlay"></div>
-      <div className="hero-content">
-        <div className="hero-text-wrapper">
-          <h1 className="hero-title">{title}</h1>
-          {subtitle && <p className="hero-subtitle">{subtitle}</p>}
-          {ctas.length > 0 && (
-            <div className="hero-ctas">
-              {ctas.map((cta, idx) => (
-                <a key={idx} href={cta.href || '#'} className="hero-cta-btn">
-                  {cta.label}
-                </a>
-              ))}
+    <section className="hero-creative">
+      <div className="hero-creative-top">
+        <div className="hero-creative-content">
+          <div className="hero-creative-text">
+            <h1 className="hero-creative-title">{title}</h1>
+            {subtitle && <p className="hero-creative-subtitle">{subtitle}</p>}
+            {ctas.length > 0 && (
+              <div className="hero-creative-ctas">
+                {ctas.map((cta, idx) => (
+                  <a
+                    key={idx}
+                    href={cta.href || '#'}
+                    className="hero-creative-cta-btn"
+                  >
+                    {cta.label}
+                  </a>
+                ))}
+              </div>
+            )}
+          </div>
+          {showDecorations && (
+            <div className="hero-decorations">
+              <div className="decoration accent-lime">●</div>
+              <div className="decoration accent-pink">◆</div>
+              <div className="decoration accent-teal">★</div>
             </div>
           )}
         </div>
       </div>
+      {bgImage && (
+        <div className="hero-creative-image">
+          <img src={bgImage} alt="Hero background" />
+        </div>
+      )}
     </section>
   );
 }
