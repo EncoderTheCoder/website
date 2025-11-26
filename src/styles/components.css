@@ -310,6 +310,20 @@
   color: var(--color-text-light);
   margin-bottom: var(--spacing-md);
   line-height: var(--body-medium-line);
+  margin: 0;
+}
+
+.card-content {
+  color: var(--color-text-light);
+  line-height: var(--body-medium-line);
+}
+
+.card-content p {
+  margin-bottom: var(--spacing-sm);
+}
+
+.card-content p:last-child {
+  margin-bottom: 0;
 }
 
 /* Forms */
