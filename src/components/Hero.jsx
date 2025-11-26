@@ -6,30 +6,24 @@ export default function Hero({
   bgImage = null,
   ctas = [],
 }) {
-  const heroStyle = bgImage
-    ? {
-        backgroundImage: `linear-gradient(135deg, rgba(255, 153, 51, 0.8), rgba(19, 136, 8, 0.8)), url(${bgImage})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-      }
-    : {
-        background:
-          'linear-gradient(135deg, rgba(255, 153, 51, 0.8), rgba(19, 136, 8, 0.8))',
-      };
+  const defaultBgImage = 'https://images.unsplash.com/photo-1531482615713-2afd69097998?w=1200&h=600&fit=crop';
+  const imageSrc = bgImage || defaultBgImage;
 
   return (
-    <section className="hero" style={heroStyle}>
-      <div className="container">
-        <div style={{ textAlign: 'center' }}>
-          <h1>{title}</h1>
-          {subtitle && <p>{subtitle}</p>}
+    <section className="hero">
+      <div className="hero-background" style={{ backgroundImage: `url(${imageSrc})` }}></div>
+      <div className="hero-overlay"></div>
+      <div className="hero-content">
+        <div className="hero-text-wrapper">
+          <h1 className="hero-title">{title}</h1>
+          {subtitle && <p className="hero-subtitle">{subtitle}</p>}
           {ctas.length > 0 && (
-            <div className="hero-buttons">
+            <div className="hero-ctas">
               {ctas.map((cta, idx) => (
                 <a
                   key={idx}
                   href={cta.href || '#'}
-                  className={`btn ${cta.variant || 'btn-primary'}`}
+                  className="hero-cta-btn"
                 >
                   {cta.label}
                 </a>
