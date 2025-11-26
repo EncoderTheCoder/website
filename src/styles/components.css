@@ -876,8 +876,9 @@
   bottom: 0;
   background: linear-gradient(
     135deg,
-    var(--color-primary),
-    var(--color-secondary)
+    var(--color-primary) 0%,
+    var(--color-lime) 50%,
+    var(--color-secondary) 100%
   );
   z-index: 1;
 }
