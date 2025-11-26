@@ -21,11 +21,15 @@
 
 .logo {
   font-size: var(--heading-m-size);
-  font-weight: 700;
-  color: var(--color-primary);
+  font-weight: 900;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   display: flex;
   align-items: center;
   gap: var(--spacing-sm);
+  letter-spacing: -0.5px;
 }
 
 .nav {
