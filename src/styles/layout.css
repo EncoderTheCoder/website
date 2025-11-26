@@ -157,6 +157,7 @@
 /* Sections */
 .section {
   padding: var(--spacing-4xl) 0;
+  position: relative;
 }
 
 .section-sm {
@@ -168,16 +169,31 @@
 }
 
 .section.bg-light {
-  background-color: var(--color-background-accent);
+  background-color: var(--color-light-blue);
+  background: linear-gradient(135deg, var(--color-light-blue) 0%, #F0F8FF 100%);
 }
 
 .section.bg-secondary {
-  background-color: var(--color-secondary);
+  background: linear-gradient(135deg, var(--color-secondary), #1b5e20);
   color: var(--color-background);
 }
 
 .section.bg-secondary a {
   color: var(--color-primary);
+}
+
+.section.bg-lime {
+  background: linear-gradient(135deg, var(--color-lime), #D4E630);
+}
+
+.section.bg-pink {
+  background: linear-gradient(135deg, var(--color-pink), #FF69B4);
+  color: var(--color-background);
+}
+
+.section.bg-teal {
+  background: linear-gradient(135deg, var(--color-teal), #00B8D4);
+  color: var(--color-background);
 }
 
 /* Text Alignment */
