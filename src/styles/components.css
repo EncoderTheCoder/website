@@ -4,7 +4,7 @@
 
 /* Header */
 .header {
-  background: linear-gradient(90deg, var(--color-background) 0%, #F5F5FF 100%);
+  background: linear-gradient(90deg, var(--color-background) 0%, #f5f5ff 100%);
   border-bottom: 3px solid var(--color-lime);
   position: sticky;
   top: 0;
@@ -22,7 +22,11 @@
 .logo {
   font-size: var(--heading-m-size);
   font-weight: 900;
-  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  background: linear-gradient(
+    135deg,
+    var(--color-primary),
+    var(--color-secondary)
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -180,7 +184,7 @@
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--color-primary), #FF7F00);
+  background: linear-gradient(135deg, var(--color-primary), #ff7f00);
   color: var(--color-background);
   box-shadow: 0 4px 15px rgba(255, 153, 51, 0.3);
 }
@@ -210,7 +214,7 @@
 }
 
 .btn-outline:hover {
-  background: linear-gradient(135deg, var(--color-pink), #FF1493);
+  background: linear-gradient(135deg, var(--color-pink), #ff1493);
   color: var(--color-background);
   border-color: var(--color-pink);
   text-decoration: none;
@@ -257,7 +261,11 @@
   left: 0;
   right: 0;
   height: 6px;
-  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+  background: linear-gradient(
+    90deg,
+    var(--color-primary),
+    var(--color-secondary)
+  );
   transform: scaleX(0);
   transform-origin: left;
   transition: transform var(--transition-base);
@@ -288,7 +296,8 @@
 }
 
 @keyframes bounce {
-  0%, 100% {
+  0%,
+  100% {
     transform: scale(1.2) rotate(12deg) translateY(0);
   }
   50% {
@@ -298,17 +307,17 @@
 
 .card-language {
   border-left: 5px solid var(--color-primary);
-  background: linear-gradient(135deg, #FFF8F0 0%, #ffffff 100%);
+  background: linear-gradient(135deg, #fff8f0 0%, #ffffff 100%);
 }
 
 .card-cultural {
   border-left: 5px solid var(--color-secondary);
-  background: linear-gradient(135deg, #F0FFF4 0%, #ffffff 100%);
+  background: linear-gradient(135deg, #f0fff4 0%, #ffffff 100%);
 }
 
 .card-community {
   border-left: 5px solid var(--color-pink);
-  background: linear-gradient(135deg, #FFF0FB 0%, #ffffff 100%);
+  background: linear-gradient(135deg, #fff0fb 0%, #ffffff 100%);
 }
 
 .card-image {
@@ -330,7 +339,11 @@
 }
 
 .card:hover .card-title {
-  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  background: linear-gradient(
+    135deg,
+    var(--color-primary),
+    var(--color-secondary)
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -465,7 +478,12 @@
 
 /* Hero Section - Creative */
 .hero-creative {
-  background: linear-gradient(180deg, var(--color-light-blue) 0%, #E8F4FF 50%, var(--color-lime) 100%);
+  background: linear-gradient(
+    180deg,
+    var(--color-light-blue) 0%,
+    #e8f4ff 50%,
+    var(--color-lime) 100%
+  );
   position: relative;
   min-height: 550px;
   padding: var(--spacing-4xl) 0;
@@ -511,7 +529,11 @@
   display: block;
   width: 100px;
   height: 4px;
-  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+  background: linear-gradient(
+    90deg,
+    var(--color-primary),
+    var(--color-secondary)
+  );
   margin: var(--spacing-md) auto 0;
   border-radius: 2px;
 }
@@ -539,7 +561,7 @@
   padding: 1rem 2rem;
   font-size: var(--body-medium-size);
   font-weight: 700;
-  background: linear-gradient(135deg, var(--color-pink), #FF1493);
+  background: linear-gradient(135deg, var(--color-pink), #ff1493);
   color: white;
   border-radius: var(--radius-full);
   text-decoration: none;
@@ -604,7 +626,8 @@
 }
 
 @keyframes float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0px) rotate(0deg);
   }
   50% {
@@ -774,7 +797,12 @@
 
 /* About Mission Section */
 .about-mission-section {
-  background: linear-gradient(135deg, var(--color-light-blue) 0%, #E8F4FF 50%, #F5F5FF 100%);
+  background: linear-gradient(
+    135deg,
+    var(--color-light-blue) 0%,
+    #e8f4ff 50%,
+    #f5f5ff 100%
+  );
   position: relative;
 }
 
@@ -947,7 +975,7 @@
   padding: 1.25rem 2.5rem;
   font-size: var(--body-medium-size);
   font-weight: 700;
-  background: linear-gradient(135deg, var(--color-teal), #00B8D4);
+  background: linear-gradient(135deg, var(--color-teal), #00b8d4);
   color: var(--color-background);
   border-radius: var(--radius-full);
   text-decoration: none;

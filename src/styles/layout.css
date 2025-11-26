@@ -170,7 +170,7 @@
 
 .section.bg-light {
   background-color: var(--color-light-blue);
-  background: linear-gradient(135deg, var(--color-light-blue) 0%, #F0F8FF 100%);
+  background: linear-gradient(135deg, var(--color-light-blue) 0%, #f0f8ff 100%);
 }
 
 .section.bg-secondary {
@@ -183,16 +183,16 @@
 }
 
 .section.bg-lime {
-  background: linear-gradient(135deg, var(--color-lime), #D4E630);
+  background: linear-gradient(135deg, var(--color-lime), #d4e630);
 }
 
 .section.bg-pink {
-  background: linear-gradient(135deg, var(--color-pink), #FF69B4);
+  background: linear-gradient(135deg, var(--color-pink), #ff69b4);
   color: var(--color-background);
 }
 
 .section.bg-teal {
-  background: linear-gradient(135deg, var(--color-teal), #00B8D4);
+  background: linear-gradient(135deg, var(--color-teal), #00b8d4);
   color: var(--color-background);
 }
 
