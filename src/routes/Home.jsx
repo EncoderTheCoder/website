@@ -164,11 +164,13 @@ export default function Home() {
       />
 
       {/* Cultural Events Gallery */}
-      <section className="section">
+      <section className="section gallery-section bg-light">
         <div className="container">
-          <h2 style={{ textAlign: 'center', marginBottom: 'var(--spacing-2xl)' }}>
-            Cultural Events Gallery
-          </h2>
+          <div className="section-header">
+            <span className="section-label">Our Community</span>
+            <h2 className="section-title">Cultural Events Gallery</h2>
+            <p className="section-description">Explore the vibrant moments from our events and celebrations</p>
+          </div>
           <Gallery />
         </div>
       </section>
