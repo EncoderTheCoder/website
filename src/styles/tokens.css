@@ -3,10 +3,18 @@
    ============================================ */
 
 :root {
-  /* Colors */
+  /* Colors - Brand */
   --color-primary: #FF9933;
   --color-secondary: #138808;
   --color-accent: #000080;
+
+  /* Colors - Padlet Accents */
+  --color-lime: #C8EA00;
+  --color-pink: #FF00D4;
+  --color-teal: #00D9FF;
+  --color-light-blue: #B0E0FF;
+
+  /* Colors - Base */
   --color-background: #FFFFFF;
   --color-text: #333333;
   --color-background-accent: #F5F5F5;
