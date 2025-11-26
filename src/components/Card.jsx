@@ -1,16 +1,10 @@
 import React from 'react';
 
-export default function Card({ icon, title, text, href = '#' }) {
+export default function Card({ icon, title, text, href = '#', variant = 'default' }) {
   return (
-    <a href={href} className="card" style={{ textDecoration: 'none' }}>
+    <a href={href} className={`card card-${variant}`}>
       {icon && (
-        <div
-          style={{
-            fontSize: '2rem',
-            marginBottom: '1rem',
-            textAlign: 'center',
-          }}
-        >
+        <div className="card-icon">
           {icon}
         </div>
       )}
