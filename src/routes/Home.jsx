@@ -144,11 +144,13 @@ export default function Home() {
       </section>
 
       {/* What Our Students Say */}
-      <section className="section">
+      <section className="section testimonials-section">
         <div className="container">
-          <h2 style={{ textAlign: 'center', marginBottom: 'var(--spacing-2xl)' }}>
-            What Our Students Say
-          </h2>
+          <div className="section-header">
+            <span className="section-label">Success Stories</span>
+            <h2 className="section-title">What Our Students Say</h2>
+            <p className="section-description">Hear from our thriving community of learners</p>
+          </div>
           <Carousel items={testimonialsData} autoRotate={true} />
         </div>
       </section>
