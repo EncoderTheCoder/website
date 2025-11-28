@@ -67,31 +67,44 @@ export default function Home() {
       />
 
       {/* About Our Mission */}
-      <section className="section">
+      <section className="section about-mission-section">
         <div className="container">
-          <div className="grid grid-2">
-            <div>
-              <h2>About Our Mission</h2>
-              <p>
+          <div className="grid grid-2 about-grid">
+            <div className="about-content">
+              <span className="section-label">Our Mission</span>
+              <h2 className="section-title">
+                Learn, Connect, Celebrate Heritage
+              </h2>
+              <p className="about-text">
                 At Vedic Hindi School, we believe language is the gateway to
                 culture. Our mission is to make Hindi learning accessible,
                 engaging, and deeply rooted in Indian heritage.
               </p>
-              <p>
+              <p className="about-text">
                 Through innovative teaching methods and community-driven
                 initiatives, we empower students worldwide to connect with their
                 roots and appreciate the rich cultural traditions of India.
               </p>
+              <div className="about-stats">
+                <div className="stat">
+                  <h3 className="stat-number">500+</h3>
+                  <p className="stat-label">Active Students</p>
+                </div>
+                <div className="stat">
+                  <h3 className="stat-number">15+</h3>
+                  <p className="stat-label">Expert Teachers</p>
+                </div>
+                <div className="stat">
+                  <h3 className="stat-number">10+</h3>
+                  <p className="stat-label">Years Experience</p>
+                </div>
+              </div>
             </div>
-            <div>
+            <div className="about-image-wrapper">
               <img
-                src="https://via.placeholder.com/400x300?text=About+Mission"
+                src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=600&fit=crop"
                 alt="About Our Mission"
-                style={{
-                  borderRadius: 'var(--radius-lg)',
-                  width: '100%',
-                  height: 'auto',
-                }}
+                className="about-image"
               />
             </div>
           </div>
@@ -99,40 +112,51 @@ export default function Home() {
       </section>
 
       {/* Our Programs and Services */}
-      <section className="section bg-light">
+      <section className="section programs-section">
         <div className="container">
-          <h2 style={{ textAlign: 'center', marginBottom: 'var(--spacing-2xl)' }}>
-            Our Programs & Services
-          </h2>
-          <div className="grid grid-3">
+          <div className="section-header">
+            <span className="section-label">What We Offer</span>
+            <h2 className="section-title">Our Programs & Services</h2>
+            <p className="section-description">
+              Comprehensive learning experiences designed for all levels
+            </p>
+          </div>
+          <div className="grid grid-3 programs-grid">
             <Card
               icon="📚"
               title="Language Courses"
               text="Structured Hindi learning from beginner to advanced levels"
               href="/programs"
+              variant="language"
             />
             <Card
               icon="🎭"
               title="Cultural Events"
               text="Immersive experiences celebrating Indian festivals and traditions"
               href="/"
+              variant="cultural"
             />
             <Card
               icon="👥"
               title="Community Learning"
               text="Interactive study circles and peer-to-peer learning groups"
               href="/"
+              variant="community"
             />
           </div>
         </div>
       </section>
 
       {/* What Our Students Say */}
-      <section className="section">
+      <section className="section testimonials-section">
         <div className="container">
-          <h2 style={{ textAlign: 'center', marginBottom: 'var(--spacing-2xl)' }}>
-            What Our Students Say
-          </h2>
+          <div className="section-header">
+            <span className="section-label">Success Stories</span>
+            <h2 className="section-title">What Our Students Say</h2>
+            <p className="section-description">
+              Hear from our thriving community of learners
+            </p>
+          </div>
           <Carousel items={testimonialsData} autoRotate={true} />
         </div>
       </section>
@@ -146,47 +170,55 @@ export default function Home() {
       />
 
       {/* Cultural Events Gallery */}
-      <section className="section">
+      <section className="section gallery-section bg-light">
         <div className="container">
-          <h2 style={{ textAlign: 'center', marginBottom: 'var(--spacing-2xl)' }}>
-            Cultural Events Gallery
-          </h2>
+          <div className="section-header">
+            <span className="section-label">Our Community</span>
+            <h2 className="section-title">Cultural Events Gallery</h2>
+            <p className="section-description">
+              Explore the vibrant moments from our events and celebrations
+            </p>
+          </div>
           <Gallery />
         </div>
       </section>
 
       {/* Get in Touch */}
-      <section className="section bg-light">
+      <section className="section contact-section">
         <div className="container">
-          <h2 style={{ textAlign: 'center', marginBottom: 'var(--spacing-2xl)' }}>
-            Get in Touch
-          </h2>
-          <div className="grid grid-2">
-            <div>
-              <h3>Contact Information</h3>
-              <div style={{ marginBottom: 'var(--spacing-lg)' }}>
-                <p style={{ fontWeight: '600', marginBottom: 'var(--spacing-xs)' }}>
-                  📍 Address
+          <div className="section-header">
+            <h2 className="section-title">Get in Touch</h2>
+            <p className="section-description">
+              We'd love to hear from you. Reach out with any questions!
+            </p>
+          </div>
+          <div className="grid grid-2 contact-grid">
+            <div className="contact-info">
+              <h3 className="contact-title">Contact Information</h3>
+              <div className="contact-item">
+                <p className="contact-label">📍 Address</p>
+                <p className="contact-value">
+                  123 Cultural Center, Heritage City, India 100001
                 </p>
-                <p>123 Cultural Center, Heritage City, India 100001</p>
               </div>
-              <div style={{ marginBottom: 'var(--spacing-lg)' }}>
-                <p style={{ fontWeight: '600', marginBottom: 'var(--spacing-xs)' }}>
-                  ✉️ Email
-                </p>
-                <a href="mailto:info@vedichiindischool.org">
+              <div className="contact-item">
+                <p className="contact-label">✉️ Email</p>
+                <a
+                  href="mailto:info@vedichiindischool.org"
+                  className="contact-link"
+                >
                   info@vedichiindischool.org
                 </a>
               </div>
-              <div style={{ marginBottom: 'var(--spacing-lg)' }}>
-                <p style={{ fontWeight: '600', marginBottom: 'var(--spacing-xs)' }}>
-                  📱 Phone
-                </p>
-                <a href="tel:+1234567890">+1 (234) 567-8900</a>
+              <div className="contact-item">
+                <p className="contact-label">📱 Phone</p>
+                <a href="tel:+1234567890" className="contact-link">
+                  +1 (234) 567-8900
+                </a>
               </div>
             </div>
-            <div>
-              <h3>Send us a Message</h3>
+            <div className="contact-form">
+              <h3 className="contact-title">Send us a Message</h3>
               <Form />
             </div>
           </div>

@@ -1,21 +1,21 @@
 import React from 'react';
 
-export default function Card({ icon, title, text, href = '#' }) {
+export default function Card({
+  icon,
+  title,
+  text,
+  href = '#',
+  variant = 'default',
+}) {
   return (
-    <a href={href} className="card" style={{ textDecoration: 'none' }}>
-      {icon && (
-        <div
-          style={{
-            fontSize: '2rem',
-            marginBottom: '1rem',
-            textAlign: 'center',
-          }}
-        >
-          {icon}
-        </div>
-      )}
+    <a href={href} className={`card card-${variant}`}>
+      {icon && <div className="card-icon">{icon}</div>}
       <h3 className="card-title">{title}</h3>
-      <p className="card-text">{text}</p>
+      {typeof text === 'string' ? (
+        <p className="card-text">{text}</p>
+      ) : (
+        <div className="card-content">{text}</div>
+      )}
     </a>
   );
 }
