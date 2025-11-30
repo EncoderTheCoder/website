@@ -24,7 +24,6 @@ export default function Header() {
       <div className="container">
         <div className="header-content">
           <Link to="/" className="logo">
-            <span>🇮🇳</span>
             <span>VHS</span>
           </Link>
 
