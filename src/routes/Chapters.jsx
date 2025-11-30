@@ -73,10 +73,7 @@ export default function Chapters() {
   return (
     <>
       {/* Hero */}
-      <Hero
-        title="Global Chapters"
-        subtitle="Learn Hindi in your community"
-      />
+      <Hero title="Global Chapters" subtitle="Learn Hindi in your community" />
 
       {/* About Chapters */}
       <section className="section">
@@ -92,8 +89,8 @@ export default function Chapters() {
                 small town, chapters provide support, resources, and friendship.
               </p>
               <p>
-                Each chapter is led by trained facilitators and connects with the
-                global VHS network for curriculum, materials, and guidance.
+                Each chapter is led by trained facilitators and connects with
+                the global VHS network for curriculum, materials, and guidance.
               </p>
             </div>
             <img
@@ -112,7 +109,9 @@ export default function Chapters() {
       {/* Benefits */}
       <section className="section bg-light">
         <div className="container">
-          <h2 style={{ textAlign: 'center', marginBottom: 'var(--spacing-2xl)' }}>
+          <h2
+            style={{ textAlign: 'center', marginBottom: 'var(--spacing-2xl)' }}
+          >
             Chapter Benefits
           </h2>
           <div className="grid grid-3">
@@ -131,7 +130,9 @@ export default function Chapters() {
       {/* Testimonials */}
       <section className="section">
         <div className="container">
-          <h2 style={{ textAlign: 'center', marginBottom: 'var(--spacing-2xl)' }}>
+          <h2
+            style={{ textAlign: 'center', marginBottom: 'var(--spacing-2xl)' }}
+          >
             Member Stories
           </h2>
           <Carousel items={testimonialsData} autoRotate={true} />

@@ -100,8 +100,9 @@ export default function About() {
                 Bringing Indian Language, Culture & Identity Back to Every Home.
               </h1>
               <p className="about-hero-subtitle">
-                A global learning movement helping children reconnect with their heritage
-                through Hindi, Vedic wisdom, and immersive cultural learning.
+                A global learning movement helping children reconnect with their
+                heritage through Hindi, Vedic wisdom, and immersive cultural
+                learning.
               </p>
               <div className="about-hero-buttons">
                 <a href="/programs" className="btn-primary">
@@ -114,9 +115,7 @@ export default function About() {
             </div>
             <div className="about-hero-right">
               <div className="about-hero-illustration">
-                <div className="illustration-content">
-                  👨‍👩‍👧‍👦
-                </div>
+                <div className="illustration-content">👨‍👩‍👧‍👦</div>
                 <div className="devanagari-accent">अक्षर</div>
               </div>
             </div>
@@ -130,9 +129,9 @@ export default function About() {
           <h2 className="section-title-center">Our Story</h2>
           <div className="story-text-center">
             <p>
-              Vedic Hindi School (VHS) was born from a longing — to help children
-              of global Indians speak to their grandparents, celebrate festivals
-              with understanding, and feel proud of their roots.
+              Vedic Hindi School (VHS) was born from a longing — to help
+              children of global Indians speak to their grandparents, celebrate
+              festivals with understanding, and feel proud of their roots.
             </p>
             <p>
               From one small community class in the US, VHS has become a global
@@ -184,7 +183,12 @@ export default function About() {
 
           {/* Beliefs Grid */}
           <div className="beliefs-section">
-            <h3 style={{ textAlign: 'center', marginBottom: 'var(--spacing-2xl)' }}>
+            <h3
+              style={{
+                textAlign: 'center',
+                marginBottom: 'var(--spacing-2xl)',
+              }}
+            >
               We Believe
             </h3>
             <div className="beliefs-grid">
@@ -202,7 +206,9 @@ export default function About() {
       {/* Accreditation & Affiliations */}
       <section className="section about-accreditation">
         <div className="container">
-          <h2 className="section-title-center">🏆 Accreditation & Affiliations</h2>
+          <h2 className="section-title-center">
+            🏆 Accreditation & Affiliations
+          </h2>
 
           <div className="accreditation-cards">
             <div className="accred-card">
@@ -217,8 +223,8 @@ export default function About() {
               <span className="accred-icon">🏅</span>
               <h3>Credit Program</h3>
               <p>
-                Our Credit Program (US ISDs) lets students earn official school credits
-                while exploring Hindi and Indian culture.
+                Our Credit Program (US ISDs) lets students earn official school
+                credits while exploring Hindi and Indian culture.
               </p>
             </div>
           </div>
@@ -230,8 +236,8 @@ export default function About() {
         <div className="container">
           <h2 className="section-title-center">👥 Leadership Team</h2>
           <p className="section-subtitle">
-            VHS is led by a passionate team of educators and innovators who believe
-            in bringing India's wisdom to the world.
+            VHS is led by a passionate team of educators and innovators who
+            believe in bringing India's wisdom to the world.
           </p>
 
           <div className="grid grid-3">
@@ -242,10 +248,18 @@ export default function About() {
                 title={leader.name}
                 text={
                   <>
-                    <p style={{ fontWeight: '600', marginBottom: 'var(--spacing-xs)', color: 'var(--color-primary)' }}>
+                    <p
+                      style={{
+                        fontWeight: '600',
+                        marginBottom: 'var(--spacing-xs)',
+                        color: 'var(--color-primary)',
+                      }}
+                    >
                       {leader.role}
                     </p>
-                    <p style={{ margin: 0, fontSize: 'var(--body-small-size)' }}>
+                    <p
+                      style={{ margin: 0, fontSize: 'var(--body-small-size)' }}
+                    >
                       {leader.bio}
                     </p>
                   </>

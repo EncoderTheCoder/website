@@ -69,10 +69,30 @@ export default function Programs() {
   ];
 
   const communityPrograms = [
-    { id: 1, icon: '👥', title: 'Community Teaching Circles', description: 'Small group learning' },
-    { id: 2, icon: '👨‍👩‍👧', title: 'Parent-Led Learning Clubs', description: 'Family learning together' },
-    { id: 3, icon: '🎭', title: 'Cultural Storytelling Workshops', description: 'Story-based learning' },
-    { id: 4, icon: '🌟', title: 'Train-the-Mentor Program', description: 'Leadership development' },
+    {
+      id: 1,
+      icon: '👥',
+      title: 'Community Teaching Circles',
+      description: 'Small group learning',
+    },
+    {
+      id: 2,
+      icon: '👨‍👩‍👧',
+      title: 'Parent-Led Learning Clubs',
+      description: 'Family learning together',
+    },
+    {
+      id: 3,
+      icon: '🎭',
+      title: 'Cultural Storytelling Workshops',
+      description: 'Story-based learning',
+    },
+    {
+      id: 4,
+      icon: '🌟',
+      title: 'Train-the-Mentor Program',
+      description: 'Leadership development',
+    },
   ];
 
   const faqItems = [
@@ -105,10 +125,41 @@ export default function Programs() {
         <div className="programs-hero-bg">
           <div className="gradient-animated"></div>
           <div className="devanagari-overlay">
-            <span className="devanagari-char" style={{ transform: `translate(${mousePosition.x}px, ${mousePosition.y}px)` }}>अ</span>
-            <span className="devanagari-char" style={{ transform: `translate(${mousePosition.x * 0.8}px, ${mousePosition.y * 0.8}px)`, animationDelay: '0.5s' }}>क</span>
-            <span className="devanagari-char" style={{ transform: `translate(${mousePosition.x * 0.6}px, ${mousePosition.y * 0.6}px)`, animationDelay: '1s' }}>ह</span>
-            <span className="devanagari-char" style={{ transform: `translate(${mousePosition.x * 0.9}px, ${mousePosition.y * 0.9}px)`, animationDelay: '1.5s' }}>ल</span>
+            <span
+              className="devanagari-char"
+              style={{
+                transform: `translate(${mousePosition.x}px, ${mousePosition.y}px)`,
+              }}
+            >
+              अ
+            </span>
+            <span
+              className="devanagari-char"
+              style={{
+                transform: `translate(${mousePosition.x * 0.8}px, ${mousePosition.y * 0.8}px)`,
+                animationDelay: '0.5s',
+              }}
+            >
+              क
+            </span>
+            <span
+              className="devanagari-char"
+              style={{
+                transform: `translate(${mousePosition.x * 0.6}px, ${mousePosition.y * 0.6}px)`,
+                animationDelay: '1s',
+              }}
+            >
+              ह
+            </span>
+            <span
+              className="devanagari-char"
+              style={{
+                transform: `translate(${mousePosition.x * 0.9}px, ${mousePosition.y * 0.9}px)`,
+                animationDelay: '1.5s',
+              }}
+            >
+              ल
+            </span>
           </div>
         </div>
 
@@ -119,7 +170,8 @@ export default function Programs() {
                 Programs that connect identity, culture & learning.
               </h1>
               <p className="programs-hero-subtitle">
-                Explore immersive programs for students, educators & community leaders across the world.
+                Explore immersive programs for students, educators & community
+                leaders across the world.
               </p>
               <div className="programs-hero-buttons">
                 <a href="#student-programs" className="btn-programs-primary">
@@ -135,8 +187,18 @@ export default function Programs() {
                 <div className="illustration-emoji">📚</div>
                 <div className="floating-icons">
                   <span className="icon-float">👨‍🎓</span>
-                  <span className="icon-float" style={{ animationDelay: '0.3s' }}>🎯</span>
-                  <span className="icon-float" style={{ animationDelay: '0.6s' }}>🌟</span>
+                  <span
+                    className="icon-float"
+                    style={{ animationDelay: '0.3s' }}
+                  >
+                    🎯
+                  </span>
+                  <span
+                    className="icon-float"
+                    style={{ animationDelay: '0.6s' }}
+                  >
+                    🌟
+                  </span>
                 </div>
               </div>
             </div>
@@ -177,7 +239,9 @@ export default function Programs() {
                   <div className="teacher-text">
                     <h3>{program.title}</h3>
                     <p>{program.description}</p>
-                    <a href="#" className="program-link">Learn More →</a>
+                    <a href="#" className="program-link">
+                      Learn More →
+                    </a>
                   </div>
                 </div>
               </div>
@@ -192,7 +256,11 @@ export default function Programs() {
           <h2 className="section-title-center">Community Learning Ecosystem</h2>
           <div className="community-radial">
             <div className="community-center">
-              <div className="center-label">Community Learning<br />Ecosystem</div>
+              <div className="center-label">
+                Community Learning
+                <br />
+                Ecosystem
+              </div>
             </div>
             <div className="community-orbits">
               {communityPrograms.map((program, idx) => (
@@ -200,7 +268,11 @@ export default function Programs() {
                   key={program.id}
                   className="orbit-bubble"
                   style={{ '--orbit-index': idx }}
-                  onClick={() => setSelectedCommunity(selectedCommunity === program.id ? null : program.id)}
+                  onClick={() =>
+                    setSelectedCommunity(
+                      selectedCommunity === program.id ? null : program.id,
+                    )
+                  }
                   role="button"
                   tabIndex={0}
                 >
