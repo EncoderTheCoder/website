@@ -53,7 +53,7 @@ export default function Carousel({ items = [], autoRotate = true }) {
       <div style={{ position: 'relative', width: '100%', minHeight: '300px' }}>
         {items.map((item, index) => (
           <div
-            key={index}
+            key={item.id || index}
             style={{
               position: 'absolute',
               top: 0,
@@ -152,9 +152,9 @@ export default function Carousel({ items = [], autoRotate = true }) {
           zIndex: 10,
         }}
       >
-        {items.map((_, index) => (
+        {items.map((item, index) => (
           <button
-            key={index}
+            key={item.id || index}
             onClick={() => goToSlide(index)}
             aria-label={`Go to slide ${index + 1}`}
             style={{

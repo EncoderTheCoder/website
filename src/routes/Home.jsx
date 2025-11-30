@@ -102,7 +102,7 @@ export default function Home() {
             </div>
             <div className="about-image-wrapper">
               <img
-                src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=600&fit=crop"
+                src="https://cdn.builder.io/api/v1/image/assets%2Fb2a0d70658834eb98ba26675db1f16fe%2F5f6b6d36089d498b8db867177b271aa4"
                 alt="About Our Mission"
                 className="about-image"
               />
