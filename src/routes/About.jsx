@@ -77,7 +77,7 @@ export default function About() {
               </p>
             </div>
             <img
-              src="https://via.placeholder.com/400x300?text=Our+History"
+              src="https://cdn.builder.io/api/v1/image/assets%2Fb2a0d70658834eb98ba26675db1f16fe%2Fb6c1babb78894b3faa931ba38bf53927"
               alt="Our History"
               style={{
                 borderRadius: 'var(--radius-lg)',
