@@ -32,6 +32,7 @@ export default function Chapters() {
 
   const testimonialsData = [
     {
+      id: 1,
       content: (
         <Testimonial
           quote="Our local chapter brought Hindi learning to my entire town!"
@@ -42,6 +43,7 @@ export default function Chapters() {
       ),
     },
     {
+      id: 2,
       content: (
         <Testimonial
           quote="Best decision joining the chapter. Made so many friends!"
