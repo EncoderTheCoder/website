@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import Card from '../components/Card';
 import Carousel from '../components/Carousel';
 import Testimonial from '../components/Testimonial';
-import CTA from '../components/CTA';
 import '../styles/about.css';
 
 export default function About() {
