@@ -55,11 +55,13 @@ export default function Chapters() {
 
   const upcomingEvents = [
     {
+      id: 1,
       date: 'Nov 15, 2025',
       title: 'Hindi Basics Meetup',
       description: 'Casual gathering for beginners to practice speaking',
     },
     {
+      id: 2,
       date: 'Nov 22, 2025',
       title: 'Diwali Celebration',
       description: 'Festival celebration with cultural performances',
