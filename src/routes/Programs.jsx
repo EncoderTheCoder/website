@@ -336,15 +336,60 @@ export default function Programs() {
           <h2 className="section-title-center">Programs for Students</h2>
           <div className="student-programs-grid">
             {studentPrograms.map((program) => (
-              <div key={program.id} className="program-card">
-                <div className="program-card-bg">
-                  <span className="program-accent">{program.accent}</span>
+              <div key={program.id}>
+                <div
+                  className={`program-card ${expandedCategory === program.id ? 'expanded' : ''}`}
+                  onClick={() =>
+                    setExpandedCategory(
+                      expandedCategory === program.id ? null : program.id,
+                    )
+                  }
+                >
+                  <div className="program-card-bg">
+                    <span className="program-accent">{program.accent}</span>
+                  </div>
+                  <div className="program-card-content">
+                    <div className="program-icon">{program.icon}</div>
+                    <h3 className="program-title">{program.title}</h3>
+                    <p className="program-description">{program.description}</p>
+                    <div className="expand-indicator">
+                      {expandedCategory === program.id ? '−' : '+'}
+                    </div>
+                  </div>
                 </div>
-                <div className="program-card-content">
-                  <div className="program-icon">{program.icon}</div>
-                  <h3 className="program-title">{program.title}</h3>
-                  <p className="program-description">{program.description}</p>
-                </div>
+
+                {expandedCategory === program.id && (
+                  <div className="sub-programs-container">
+                    <div className="sub-programs-bento">
+                      {subPrograms[program.id].map((subProgram) => (
+                        <div
+                          key={subProgram.id}
+                          className="sub-program-card"
+                        >
+                          <div className="sub-program-image">
+                            {subProgram.image}
+                          </div>
+                          <div className="sub-program-detail">
+                            {subProgram.detail}
+                          </div>
+                          <div className="sub-program-name">
+                            {subProgram.name}
+                          </div>
+                          <div className="sub-program-cta">
+                            <a
+                              href={subProgram.enrollUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="enroll-button"
+                            >
+                              Enroll Now
+                            </a>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
             ))}
           </div>
