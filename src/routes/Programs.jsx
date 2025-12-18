@@ -334,65 +334,61 @@ export default function Programs() {
       <section className="section programs-student" id="student-programs">
         <div className="container">
           <h2 className="section-title-center">Programs for Students</h2>
-          <div className="student-programs-grid">
-            {studentPrograms.map((program) => (
-              <div key={program.id}>
-                <div
-                  className={`program-card ${expandedCategory === program.id ? 'expanded' : ''}`}
+
+          <div className="category-carousel-wrapper">
+            <div className="category-carousel">
+              {studentPrograms.map((program) => (
+                <button
+                  key={program.id}
+                  className={`category-pill ${expandedCategory === program.id ? 'active' : ''}`}
                   onClick={() =>
                     setExpandedCategory(
                       expandedCategory === program.id ? null : program.id,
                     )
                   }
                 >
-                  <div className="program-card-bg">
-                    <span className="program-accent">{program.accent}</span>
-                  </div>
-                  <div className="program-card-content">
-                    <div className="program-icon">{program.icon}</div>
-                    <h3 className="program-title">{program.title}</h3>
-                    <p className="program-description">{program.description}</p>
-                    <div className="expand-indicator">
-                      {expandedCategory === program.id ? '−' : '+'}
-                    </div>
-                  </div>
-                </div>
-
-                {expandedCategory === program.id && (
-                  <div className="sub-programs-container">
-                    <div className="sub-programs-bento">
-                      {subPrograms[program.id].map((subProgram) => (
-                        <div
-                          key={subProgram.id}
-                          className="sub-program-card"
-                        >
-                          <div className="sub-program-image">
-                            {subProgram.image}
-                          </div>
-                          <div className="sub-program-detail">
-                            {subProgram.detail}
-                          </div>
-                          <div className="sub-program-name">
-                            {subProgram.name}
-                          </div>
-                          <div className="sub-program-cta">
-                            <a
-                              href={subProgram.enrollUrl}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="enroll-button"
-                            >
-                              Enroll Now
-                            </a>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </div>
-            ))}
+                  <span className="pill-icon">{program.icon}</span>
+                  <span className="pill-text">{program.title}</span>
+                </button>
+              ))}
+            </div>
           </div>
+
+          {expandedCategory && (
+            <div className="sub-programs-section">
+              <h3 className="sub-programs-title">
+                {studentPrograms.find((p) => p.id === expandedCategory)?.title}
+              </h3>
+              <div className="sub-programs-carousel-wrapper">
+                <div className="sub-programs-carousel">
+                  {subPrograms[expandedCategory].map((subProgram) => (
+                    <div
+                      key={subProgram.id}
+                      className="sub-program-card-carousel"
+                    >
+                      <div className="carousel-card-top">
+                        <div className="carousel-card-image">
+                          {subProgram.image}
+                        </div>
+                        <h4 className="carousel-card-title">{subProgram.name}</h4>
+                      </div>
+                      <p className="carousel-card-description">
+                        {subProgram.detail}
+                      </p>
+                      <a
+                        href={subProgram.enrollUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="carousel-card-button"
+                      >
+                        Enroll Now
+                      </a>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </section>
 
