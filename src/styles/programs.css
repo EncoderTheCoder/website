@@ -997,6 +997,36 @@
     gap: 20px;
   }
 
+  .expand-indicator {
+    width: 36px;
+    height: 36px;
+    font-size: 20px;
+  }
+
+  .sub-programs-container {
+    padding: 16px;
+  }
+
+  .sub-programs-bento {
+    gap: 12px;
+  }
+
+  .sub-program-image {
+    font-size: 32px;
+    padding: 16px;
+  }
+
+  .sub-program-detail,
+  .sub-program-name {
+    font-size: 13px;
+    padding: 10px 16px;
+  }
+
+  .enroll-button {
+    font-size: 12px;
+    padding: 10px;
+  }
+
   .teacher-text {
     padding: 24px;
   }
