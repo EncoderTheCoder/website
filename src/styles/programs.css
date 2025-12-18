@@ -850,65 +850,51 @@
     flex-direction: column;
   }
 
-  .student-programs-grid {
-    grid-template-columns: 1fr;
+  .category-carousel {
+    gap: 10px;
   }
 
-  .program-card {
-    min-height: auto;
-    padding: 32px;
+  .category-pill {
+    padding: 12px 16px;
+    font-size: 14px;
+    gap: 8px;
   }
 
-  .program-title {
+  .pill-icon {
+    font-size: 20px;
+  }
+
+  .sub-programs-title {
     font-size: 22px;
+    margin-bottom: 24px;
   }
 
-  .program-icon {
+  .sub-program-card-carousel {
+    flex: 0 0 280px;
+  }
+
+  .carousel-card-top {
+    padding: 24px 20px 16px 20px;
+  }
+
+  .carousel-card-image {
     font-size: 40px;
+    height: 60px;
+    margin-bottom: 12px;
   }
 
-  .sub-programs-container {
-    padding: 24px;
-    margin-top: 16px;
+  .carousel-card-title {
+    font-size: 16px;
   }
 
-  .sub-programs-bento {
-    grid-template-columns: 1fr;
-    gap: 16px;
+  .carousel-card-description {
+    padding: 16px 20px;
+    font-size: 13px;
   }
 
-  .sub-program-card {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto auto;
-    min-height: auto;
-  }
-
-  .sub-program-image {
-    grid-column: 1;
-    grid-row: 1;
-    min-width: auto;
-    padding: 24px;
-    font-size: 40px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-  }
-
-  .sub-program-detail {
-    grid-column: 1;
-    grid-row: 2;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  .carousel-card-button {
     padding: 12px 20px;
-  }
-
-  .sub-program-name {
-    grid-column: 1;
-    grid-row: 3;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-    padding: 12px 20px;
-  }
-
-  .sub-program-cta {
-    grid-column: 1;
-    grid-row: 4;
+    font-size: 13px;
   }
 
   .community-radial {
