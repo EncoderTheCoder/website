@@ -9,6 +9,7 @@ export default function Programs() {
 
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [selectedCommunity, setSelectedCommunity] = useState(null);
+  const [expandedCategory, setExpandedCategory] = useState(null);
 
   useEffect(() => {
     const handleMouseMove = (e) => {
