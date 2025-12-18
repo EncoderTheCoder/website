@@ -820,6 +820,10 @@
   .program-card {
     min-height: 280px;
   }
+
+  .sub-programs-bento {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 768px) {
