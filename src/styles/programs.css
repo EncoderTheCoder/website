@@ -869,6 +869,50 @@
     font-size: 40px;
   }
 
+  .sub-programs-container {
+    padding: 24px;
+    margin-top: 16px;
+  }
+
+  .sub-programs-bento {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .sub-program-card {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    min-height: auto;
+  }
+
+  .sub-program-image {
+    grid-column: 1;
+    grid-row: 1;
+    min-width: auto;
+    padding: 24px;
+    font-size: 40px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  }
+
+  .sub-program-detail {
+    grid-column: 1;
+    grid-row: 2;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    padding: 12px 20px;
+  }
+
+  .sub-program-name {
+    grid-column: 1;
+    grid-row: 3;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    padding: 12px 20px;
+  }
+
+  .sub-program-cta {
+    grid-column: 1;
+    grid-row: 4;
+  }
+
   .community-radial {
     height: 500px;
   }
