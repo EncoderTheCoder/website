@@ -801,9 +801,17 @@
     font-size: 16px;
   }
 
-  .student-programs-grid {
-    grid-template-columns: 1fr;
-    gap: 32px;
+  .category-carousel {
+    gap: 12px;
+  }
+
+  .category-pill {
+    padding: 14px 20px;
+    font-size: 14px;
+  }
+
+  .sub-program-card-carousel {
+    flex: 0 0 280px;
   }
 
   .teacher-card-content {
@@ -813,14 +821,6 @@
 
   .teacher-icon {
     min-height: 220px;
-  }
-
-  .program-card {
-    min-height: 280px;
-  }
-
-  .sub-programs-bento {
-    grid-template-columns: 1fr;
   }
 }
 
