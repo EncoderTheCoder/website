@@ -861,31 +861,33 @@
     margin-bottom: 24px;
   }
 
-  .sub-program-card-carousel {
-    flex: 0 0 280px;
+  .sub-program-card-full {
+    grid-template-columns: 90px 1fr auto;
+    gap: 0;
   }
 
-  .carousel-card-top {
-    padding: 24px 20px 16px 20px;
+  .sub-card-image {
+    font-size: 36px;
+    padding: 20px 12px;
+    min-height: 120px;
   }
 
-  .carousel-card-image {
-    font-size: 40px;
-    height: 60px;
-    margin-bottom: 12px;
+  .sub-card-content {
+    padding: 20px 20px;
+    gap: 6px;
   }
 
-  .carousel-card-title {
+  .sub-card-title {
     font-size: 16px;
   }
 
-  .carousel-card-description {
-    padding: 16px 20px;
+  .sub-card-description {
     font-size: 13px;
   }
 
-  .carousel-card-button {
-    padding: 12px 20px;
+  .sub-card-button {
+    padding: 10px 20px;
+    margin: 0 16px;
     font-size: 13px;
   }
 
