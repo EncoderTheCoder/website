@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Accordion from '../components/Accordion';
 import '../styles/programs.css';
+import programsData from '../data/programs.json';
 
 export default function Programs() {
   useEffect(() => {
