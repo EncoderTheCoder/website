@@ -386,7 +386,7 @@
   padding: 24px 28px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 12px;
 }
 
 .sub-card-title {
@@ -402,6 +402,47 @@
   color: #666;
   line-height: 1.6;
   margin: 0;
+}
+
+.sub-card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.meta-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.category-badge {
+  background: rgba(223, 246, 233, 0.8);
+  color: #1f4b3c;
+  border: 1px solid rgba(31, 75, 60, 0.2);
+}
+
+.difficulty-badge {
+  background: rgba(242, 140, 40, 0.1);
+  color: var(--terracotta);
+  border: 1px solid rgba(242, 140, 40, 0.3);
+}
+
+.duration-badge {
+  background: rgba(159, 216, 255, 0.3);
+  color: #1a5a8c;
+  border: 1px solid rgba(157, 216, 255, 0.5);
+}
+
+.price-badge {
+  background: rgba(31, 75, 60, 0.1);
+  color: var(--deep-green);
+  border: 1px solid rgba(31, 75, 60, 0.2);
+  font-weight: 700;
 }
 
 .sub-card-button {
