@@ -191,13 +191,8 @@ export default function Programs() {
               </h3>
               <div className="sub-programs-grid">
                 {subPrograms[expandedCategory].map((subProgram) => (
-                  <div
-                    key={subProgram.id}
-                    className="sub-program-card-full"
-                  >
-                    <div className="sub-card-image">
-                      {subProgram.image}
-                    </div>
+                  <div key={subProgram.id} className="sub-program-card-full">
+                    <div className="sub-card-image">{subProgram.image}</div>
                     <div className="sub-card-content">
                       <h4 className="sub-card-title">{subProgram.name}</h4>
                       <p className="sub-card-description">

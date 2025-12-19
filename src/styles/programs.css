@@ -199,7 +199,6 @@
   color: var(--saffron);
 }
 
-
 /* ===== STUDENT PROGRAMS SECTION ===== */
 .programs-student {
   background: white;
@@ -346,7 +345,11 @@
 .sub-card-image {
   grid-column: 1;
   grid-row: 1;
-  background: linear-gradient(135deg, rgba(242, 140, 40, 0.08), rgba(223, 246, 233, 0.1));
+  background: linear-gradient(
+    135deg,
+    rgba(242, 140, 40, 0.08),
+    rgba(223, 246, 233, 0.1)
+  );
   display: flex;
   align-items: center;
   justify-content: center;
@@ -814,7 +817,6 @@
     font-size: 40px;
     padding: 24px 16px;
   }
-
 }
 
 @media (max-width: 768px) {
@@ -826,7 +828,6 @@
     grid-template-columns: 1fr;
     gap: 30px;
   }
-
 
   .programs-hero-title {
     font-size: 36px;
