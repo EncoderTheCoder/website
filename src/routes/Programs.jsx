@@ -223,6 +223,28 @@ export default function Programs() {
                       <p className="sub-card-description">
                         {subProgram.detail}
                       </p>
+                      <div className="sub-card-meta">
+                        {subProgram.category && (
+                          <span className="meta-badge category-badge">
+                            {subProgram.category}
+                          </span>
+                        )}
+                        {subProgram.difficulty && (
+                          <span className="meta-badge difficulty-badge">
+                            {subProgram.difficulty}
+                          </span>
+                        )}
+                        {subProgram.duration && (
+                          <span className="meta-badge duration-badge">
+                            {subProgram.duration}
+                          </span>
+                        )}
+                        {subProgram.price && (
+                          <span className="meta-badge price-badge">
+                            {subProgram.price}
+                          </span>
+                        )}
+                      </div>
                     </div>
                     <a
                       href={subProgram.enrollUrl}
