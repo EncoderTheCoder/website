@@ -315,7 +315,7 @@
   letter-spacing: 0.3px;
 }
 
-/* Sub-Programs Carousel */
+/* Sub-Programs Section */
 .sub-programs-section {
   margin-top: 40px;
   padding-top: 40px;
@@ -342,71 +342,54 @@
   margin: 0 0 32px 0;
 }
 
-.sub-programs-carousel-wrapper {
-  overflow-x: auto;
-  overflow-y: hidden;
-  -webkit-overflow-scrolling: touch;
-  scroll-behavior: smooth;
+.sub-programs-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
 }
 
-.sub-programs-carousel-wrapper::-webkit-scrollbar {
-  height: 8px;
-}
-
-.sub-programs-carousel-wrapper::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.sub-programs-carousel-wrapper::-webkit-scrollbar-thumb {
-  background: rgba(242, 140, 40, 0.3);
-  border-radius: 4px;
-}
-
-.sub-programs-carousel-wrapper::-webkit-scrollbar-thumb:hover {
-  background: var(--saffron);
-}
-
-.sub-programs-carousel {
-  display: flex;
-  gap: 24px;
-  padding: 0;
-  min-width: min-content;
-}
-
-.sub-program-card-carousel {
-  flex: 0 0 340px;
-  display: flex;
-  flex-direction: column;
+.sub-program-card-full {
+  display: grid;
+  grid-template-columns: 120px 1fr auto;
+  grid-template-rows: auto;
+  gap: 0;
+  align-items: center;
   background: white;
-  border-radius: 20px;
+  border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
   border: 1px solid rgba(242, 140, 40, 0.1);
 }
 
-.sub-program-card-carousel:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 32px rgba(242, 140, 40, 0.15);
+.sub-program-card-full:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(242, 140, 40, 0.15);
   border-color: rgba(242, 140, 40, 0.3);
 }
 
-.carousel-card-top {
-  padding: 32px 24px 20px 24px;
-  background: linear-gradient(135deg, rgba(242, 140, 40, 0.05), rgba(223, 246, 233, 0.1));
-  border-bottom: 1px solid rgba(242, 140, 40, 0.1);
-}
-
-.carousel-card-image {
-  font-size: 56px;
-  margin-bottom: 16px;
+.sub-card-image {
+  grid-column: 1;
+  grid-row: 1;
+  background: linear-gradient(135deg, rgba(242, 140, 40, 0.1), rgba(223, 246, 233, 0.15));
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 80px;
+  font-size: 48px;
+  padding: 30px 20px;
+  min-height: 140px;
 }
 
-.carousel-card-title {
+.sub-card-content {
+  grid-column: 2;
+  grid-row: 1;
+  padding: 24px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sub-card-title {
   font-size: 18px;
   font-weight: 700;
   color: var(--deep-green);
@@ -414,30 +397,34 @@
   line-height: 1.3;
 }
 
-.carousel-card-description {
-  flex: 1;
-  padding: 20px 24px;
+.sub-card-description {
   font-size: 14px;
   color: #666;
   line-height: 1.6;
   margin: 0;
 }
 
-.carousel-card-button {
-  padding: 14px 24px;
+.sub-card-button {
+  grid-column: 3;
+  grid-row: 1;
+  padding: 12px 32px;
+  margin: 0 20px;
   background: var(--saffron);
   color: white;
   text-decoration: none;
   font-weight: 600;
   font-size: 14px;
   text-align: center;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
   border: none;
   cursor: pointer;
+  border-radius: 8px;
+  white-space: nowrap;
 }
 
-.carousel-card-button:hover {
+.sub-card-button:hover {
   background: var(--terracotta);
+  transform: translateY(-2px);
 }
 
 /* ===== TEACHER PROGRAMS SECTION ===== */
