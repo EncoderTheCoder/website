@@ -359,33 +359,31 @@ export default function Programs() {
               <h3 className="sub-programs-title">
                 {studentPrograms.find((p) => p.id === expandedCategory)?.title}
               </h3>
-              <div className="sub-programs-carousel-wrapper">
-                <div className="sub-programs-carousel">
-                  {subPrograms[expandedCategory].map((subProgram) => (
-                    <div
-                      key={subProgram.id}
-                      className="sub-program-card-carousel"
-                    >
-                      <div className="carousel-card-top">
-                        <div className="carousel-card-image">
-                          {subProgram.image}
-                        </div>
-                        <h4 className="carousel-card-title">{subProgram.name}</h4>
-                      </div>
-                      <p className="carousel-card-description">
+              <div className="sub-programs-grid">
+                {subPrograms[expandedCategory].map((subProgram) => (
+                  <div
+                    key={subProgram.id}
+                    className="sub-program-card-full"
+                  >
+                    <div className="sub-card-image">
+                      {subProgram.image}
+                    </div>
+                    <div className="sub-card-content">
+                      <h4 className="sub-card-title">{subProgram.name}</h4>
+                      <p className="sub-card-description">
                         {subProgram.detail}
                       </p>
-                      <a
-                        href={subProgram.enrollUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="carousel-card-button"
-                      >
-                        Enroll Now
-                      </a>
                     </div>
-                  ))}
-                </div>
+                    <a
+                      href={subProgram.enrollUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="sub-card-button"
+                    >
+                      Enroll Now
+                    </a>
+                  </div>
+                ))}
               </div>
             </div>
           )}
