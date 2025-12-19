@@ -1,0 +1,208 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "icon": "🏅",
+      "title": "Credit Program (US ISDs)",
+      "description": "Student earns official US school credits",
+      "accent": "अ"
+    },
+    {
+      "id": 2,
+      "icon": "🎉",
+      "title": "Annual Program",
+      "description": "12-month cultural immersion",
+      "accent": "क"
+    },
+    {
+      "id": 3,
+      "icon": "🌈",
+      "title": "Early Learning Immersion",
+      "description": "Story-based Hindi & culture",
+      "accent": "ह"
+    },
+    {
+      "id": 4,
+      "icon": "📘",
+      "title": "Courses (All Ages)",
+      "description": "Language + culture modules",
+      "accent": "ल"
+    }
+  ],
+  "subPrograms": {
+    "1": [
+      {
+        "id": "credit-1",
+        "name": "Hindi Language & Literature",
+        "detail": "Advanced proficiency with literary analysis",
+        "image": "📚",
+        "enrollUrl": "https://example.com/enroll/credit-1",
+        "duration": "16 weeks",
+        "difficulty": "Advanced",
+        "price": "$499",
+        "category": "Language"
+      },
+      {
+        "id": "credit-2",
+        "name": "Indian History & Civics",
+        "detail": "Comprehensive understanding of Indian heritage",
+        "image": "🏛️",
+        "enrollUrl": "https://example.com/enroll/credit-2",
+        "duration": "14 weeks",
+        "difficulty": "Intermediate",
+        "price": "$449",
+        "category": "History"
+      },
+      {
+        "id": "credit-3",
+        "name": "Sanskrit & Classical Studies",
+        "detail": "Ancient language and philosophical traditions",
+        "image": "🗿",
+        "enrollUrl": "https://example.com/enroll/credit-3",
+        "duration": "18 weeks",
+        "difficulty": "Advanced",
+        "price": "$599",
+        "category": "Language"
+      },
+      {
+        "id": "credit-4",
+        "name": "Arts & Cultural Expression",
+        "detail": "Traditional arts, music, and dance",
+        "image": "🎨",
+        "enrollUrl": "https://example.com/enroll/credit-4",
+        "price": "$399",
+        "category": "Arts"
+      }
+    ],
+    "2": [
+      {
+        "id": "annual-1",
+        "name": "Foundation Year",
+        "detail": "Introductory Hindi language & basics",
+        "image": "🌱",
+        "enrollUrl": "https://example.com/enroll/annual-1",
+        "duration": "12 months",
+        "difficulty": "Beginner",
+        "price": "$799",
+        "category": "Language"
+      },
+      {
+        "id": "annual-2",
+        "name": "Intermediate Year",
+        "detail": "Conversational fluency & cultural practices",
+        "image": "🌿",
+        "enrollUrl": "https://example.com/enroll/annual-2",
+        "duration": "12 months",
+        "difficulty": "Intermediate",
+        "price": "$899",
+        "category": "Language"
+      },
+      {
+        "id": "annual-3",
+        "name": "Advanced Year",
+        "detail": "Professional communication & leadership",
+        "image": "🌳",
+        "enrollUrl": "https://example.com/enroll/annual-3",
+        "duration": "12 months",
+        "difficulty": "Advanced",
+        "price": "$999",
+        "category": "Language"
+      },
+      {
+        "id": "annual-4",
+        "name": "Community Immersion",
+        "detail": "Real-world cultural engagement & projects",
+        "image": "🤝",
+        "enrollUrl": "https://example.com/enroll/annual-4",
+        "difficulty": "Intermediate"
+      }
+    ],
+    "3": [
+      {
+        "id": "early-1",
+        "name": "Nursery Stories",
+        "detail": "Age 2-4: Storytelling & basic vocabulary",
+        "image": "👶",
+        "enrollUrl": "https://example.com/enroll/early-1",
+        "duration": "8 weeks",
+        "difficulty": "Beginner",
+        "price": "$199",
+        "category": "Early Learning"
+      },
+      {
+        "id": "early-2",
+        "name": "Preschool Adventures",
+        "detail": "Age 4-5: Interactive learning through play",
+        "image": "🎪",
+        "enrollUrl": "https://example.com/enroll/early-2",
+        "duration": "10 weeks",
+        "difficulty": "Beginner",
+        "price": "$249",
+        "category": "Early Learning"
+      },
+      {
+        "id": "early-3",
+        "name": "Kindergarten Foundations",
+        "detail": "Age 5-6: Reading, writing & cultural values",
+        "image": "🎓",
+        "enrollUrl": "https://example.com/enroll/early-3",
+        "duration": "12 weeks",
+        "difficulty": "Beginner",
+        "category": "Early Learning"
+      },
+      {
+        "id": "early-4",
+        "name": "Family Learning Sessions",
+        "detail": "Parent-child bonding through Hindi activities",
+        "image": "👨‍👩‍👧",
+        "enrollUrl": "https://example.com/enroll/early-4",
+        "duration": "6 weeks",
+        "price": "$159"
+      }
+    ],
+    "4": [
+      {
+        "id": "course-1",
+        "name": "Beginner Hindi",
+        "detail": "Fundamentals & everyday communication",
+        "image": "📖",
+        "enrollUrl": "https://example.com/enroll/course-1",
+        "duration": "12 weeks",
+        "difficulty": "Beginner",
+        "price": "$349",
+        "category": "Language"
+      },
+      {
+        "id": "course-2",
+        "name": "Cultural Expressions",
+        "detail": "Art, music, poetry & traditions",
+        "image": "🎭",
+        "enrollUrl": "https://example.com/enroll/course-2",
+        "duration": "10 weeks",
+        "difficulty": "Intermediate",
+        "price": "$379",
+        "category": "Culture"
+      },
+      {
+        "id": "course-3",
+        "name": "Devanagari Script Mastery",
+        "detail": "Complete command of Hindi writing system",
+        "image": "✍️",
+        "enrollUrl": "https://example.com/enroll/course-3",
+        "duration": "8 weeks",
+        "difficulty": "Intermediate",
+        "price": "$299",
+        "category": "Language"
+      },
+      {
+        "id": "course-4",
+        "name": "Festival & Celebration Studies",
+        "detail": "Significance, traditions & celebrations",
+        "image": "🪔",
+        "enrollUrl": "https://example.com/enroll/course-4",
+        "difficulty": "Beginner",
+        "category": "Culture"
+      }
+    ]
+  }
+}

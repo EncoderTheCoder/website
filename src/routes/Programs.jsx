@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Accordion from '../components/Accordion';
 import '../styles/programs.css';
+import programsData from '../data/programs.json';
 
 export default function Programs() {
   useEffect(() => {
@@ -9,6 +10,10 @@ export default function Programs() {
 
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [selectedCommunity, setSelectedCommunity] = useState(null);
+  const [expandedCategory, setExpandedCategory] = useState(null);
+
+  const studentPrograms = programsData.categories;
+  const subPrograms = programsData.subPrograms;
 
   useEffect(() => {
     const handleMouseMove = (e) => {
@@ -21,37 +26,6 @@ export default function Programs() {
     window.addEventListener('mousemove', handleMouseMove);
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
-
-  const studentPrograms = [
-    {
-      id: 1,
-      icon: '🏅',
-      title: 'Credit Program (US ISDs)',
-      description: 'Student earns official US school credits',
-      accent: 'अ',
-    },
-    {
-      id: 2,
-      icon: '🎉',
-      title: 'Annual Program',
-      description: '12-month cultural immersion',
-      accent: 'क',
-    },
-    {
-      id: 3,
-      icon: '🌈',
-      title: 'Early Learning Immersion',
-      description: 'Story-based Hindi & culture',
-      accent: 'ह',
-    },
-    {
-      id: 4,
-      icon: '📘',
-      title: 'Courses (All Ages)',
-      description: 'Language + culture modules',
-      accent: 'ल',
-    },
-  ];
 
   const teacherPrograms = [
     {
@@ -182,26 +156,6 @@ export default function Programs() {
                 </a>
               </div>
             </div>
-            <div className="programs-hero-right">
-              <div className="hero-illustration">
-                <div className="illustration-emoji">📚</div>
-                <div className="floating-icons">
-                  <span className="icon-float">👨‍🎓</span>
-                  <span
-                    className="icon-float"
-                    style={{ animationDelay: '0.3s' }}
-                  >
-                    🎯
-                  </span>
-                  <span
-                    className="icon-float"
-                    style={{ animationDelay: '0.6s' }}
-                  >
-                    🌟
-                  </span>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -210,20 +164,76 @@ export default function Programs() {
       <section className="section programs-student" id="student-programs">
         <div className="container">
           <h2 className="section-title-center">Programs for Students</h2>
-          <div className="student-programs-grid">
-            {studentPrograms.map((program) => (
-              <div key={program.id} className="program-card">
-                <div className="program-card-bg">
-                  <span className="program-accent">{program.accent}</span>
-                </div>
-                <div className="program-card-content">
-                  <div className="program-icon">{program.icon}</div>
-                  <h3 className="program-title">{program.title}</h3>
-                  <p className="program-description">{program.description}</p>
-                </div>
-              </div>
-            ))}
+
+          <div className="category-carousel-wrapper">
+            <div className="category-carousel">
+              {studentPrograms.map((program) => (
+                <button
+                  key={program.id}
+                  className={`category-pill ${expandedCategory === program.id ? 'active' : ''}`}
+                  onClick={() =>
+                    setExpandedCategory(
+                      expandedCategory === program.id ? null : program.id,
+                    )
+                  }
+                >
+                  <span className="pill-icon">{program.icon}</span>
+                  <span className="pill-text">{program.title}</span>
+                </button>
+              ))}
+            </div>
           </div>
+
+          {expandedCategory && (
+            <div className="sub-programs-section">
+              <h3 className="sub-programs-title">
+                {studentPrograms.find((p) => p.id === expandedCategory)?.title}
+              </h3>
+              <div className="sub-programs-grid">
+                {subPrograms[expandedCategory].map((subProgram) => (
+                  <div key={subProgram.id} className="sub-program-card-full">
+                    <div className="sub-card-image">{subProgram.image}</div>
+                    <div className="sub-card-content">
+                      <h4 className="sub-card-title">{subProgram.name}</h4>
+                      <p className="sub-card-description">
+                        {subProgram.detail}
+                      </p>
+                      <div className="sub-card-meta">
+                        {subProgram.category && (
+                          <span className="meta-badge category-badge">
+                            {subProgram.category}
+                          </span>
+                        )}
+                        {subProgram.difficulty && (
+                          <span className="meta-badge difficulty-badge">
+                            {subProgram.difficulty}
+                          </span>
+                        )}
+                        {subProgram.duration && (
+                          <span className="meta-badge duration-badge">
+                            {subProgram.duration}
+                          </span>
+                        )}
+                        {subProgram.price && (
+                          <span className="meta-badge price-badge">
+                            {subProgram.price}
+                          </span>
+                        )}
+                      </div>
+                    </div>
+                    <a
+                      href={subProgram.enrollUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="sub-card-button"
+                    >
+                      Enroll Now
+                    </a>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       </section>
 
