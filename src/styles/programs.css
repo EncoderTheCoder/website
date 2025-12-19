@@ -489,15 +489,21 @@
 /* ===== TEACHER PROGRAMS SECTION ===== */
 .programs-teacher {
   background: var(--sage);
-  padding: 120px 0;
+  background-image: url(https://cdn.builder.io/api/v1/image/assets%2Fb2a0d70658834eb98ba26675db1f16fe%2Fd84a094976974cbcbc4c24a12e7d4bae);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 80px 0;
 }
 
 .teacher-programs-stack {
   display: flex;
   flex-direction: column;
   gap: 32px;
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: 1506px;
+  margin-left: auto;
+  justify-content: center;
+  align-items: center;
 }
 
 .teacher-program-card {
@@ -507,39 +513,26 @@
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
   min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding-left: 8px;
+}
+
+.teacher-program-card:first-child {
+  min-height: 52px;
 }
 
 .teacher-card-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  height: 100%;
-}
-
-.teacher-card-content:nth-child(odd) {
-  grid-template-columns: 1fr 1fr;
-}
-
-.teacher-program-card:nth-child(2) .teacher-card-content {
-  grid-template-columns: 1fr 1fr;
-  direction: rtl;
-}
-
-.teacher-program-card:nth-child(2) .teacher-text {
-  direction: ltr;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-weight: 400;
 }
 
 .teacher-icon {
-  font-size: 120px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(
-    135deg,
-    rgba(242, 140, 40, 0.1),
-    rgba(223, 246, 233, 0.3)
-  );
-  min-height: 280px;
+  display: none;
 }
 
 .teacher-text {
