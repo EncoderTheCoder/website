@@ -797,8 +797,13 @@
     font-size: 14px;
   }
 
-  .sub-program-card-carousel {
-    flex: 0 0 280px;
+  .sub-program-card-full {
+    grid-template-columns: 100px 1fr auto;
+  }
+
+  .sub-card-image {
+    font-size: 40px;
+    padding: 24px 16px;
   }
 
   .teacher-card-content {
