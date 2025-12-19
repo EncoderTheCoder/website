@@ -16,7 +16,7 @@
 /* ===== HERO SECTION ===== */
 .programs-hero {
   position: relative;
-  height: 760px;
+  height: 600px;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -117,7 +117,7 @@
   display: grid;
   grid-template-columns: 1fr;
   align-items: center;
-  gap: 60px;
+  gap: 30px;
   border-radius: 20px;
   overflow: hidden;
   background-repeat: no-repeat;
@@ -128,25 +128,25 @@
 .programs-hero-left {
   display: flex;
   flex-direction: column;
-  gap: 24px;
-  padding-top: 10px;
-  margin: 0 -5px 20px 19px;
+  gap: 16px;
+  padding-top: 0;
+  margin: 0;
 }
 
 .programs-hero-title {
   font-family: 'Playfair Display', serif;
-  font-size: 64px;
+  font-size: 52px;
   font-weight: 600;
   line-height: 1.2;
   color: var(--deep-green);
-  margin: -1px 0 0 0;
+  margin: 0;
   letter-spacing: -0.5px;
   width: 100%;
   align-self: stretch;
 }
 
 .programs-hero-subtitle {
-  font-size: 20px;
+  font-size: 16px;
   line-height: 1.5;
   color: #333;
   margin: 0;
@@ -154,8 +154,8 @@
 
 .programs-hero-buttons {
   display: flex;
-  gap: 16px;
-  margin-top: 16px;
+  gap: 12px;
+  margin-top: 8px;
 }
 
 .btn-programs-primary,
@@ -163,14 +163,14 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 18px 28px;
-  border-radius: 12px;
+  padding: 12px 24px;
+  border-radius: 8px;
   text-decoration: none;
   font-weight: 700;
   transition: all 0.3s ease;
   border: none;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 13px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
