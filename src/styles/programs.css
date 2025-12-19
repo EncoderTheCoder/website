@@ -815,14 +815,6 @@
     padding: 24px 16px;
   }
 
-  .teacher-card-content {
-    grid-template-columns: 1fr !important;
-    direction: ltr !important;
-  }
-
-  .teacher-icon {
-    min-height: 220px;
-  }
 }
 
 @media (max-width: 768px) {
