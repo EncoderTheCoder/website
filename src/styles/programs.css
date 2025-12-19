@@ -915,7 +915,7 @@
 
   .sub-card-content {
     padding: 20px 20px;
-    gap: 6px;
+    gap: 10px;
   }
 
   .sub-card-title {
@@ -924,6 +924,11 @@
 
   .sub-card-description {
     font-size: 13px;
+  }
+
+  .meta-badge {
+    padding: 3px 10px;
+    font-size: 11px;
   }
 
   .sub-card-button {
