@@ -156,26 +156,6 @@ export default function Programs() {
                 </a>
               </div>
             </div>
-            <div className="programs-hero-right">
-              <div className="hero-illustration">
-                <div className="illustration-emoji">📚</div>
-                <div className="floating-icons">
-                  <span className="icon-float">👨‍🎓</span>
-                  <span
-                    className="icon-float"
-                    style={{ animationDelay: '0.3s' }}
-                  >
-                    🎯
-                  </span>
-                  <span
-                    className="icon-float"
-                    style={{ animationDelay: '0.6s' }}
-                  >
-                    🌟
-                  </span>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
